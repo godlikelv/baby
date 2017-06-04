@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>倒计时</title>
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		h4,h3,h2{
+			margin: 0;
+		}
+		.content{
+			width: 100%;
+			min-height: 100%;
+			background: url("1.jpg");
+			background-size: 100%;
+		}
+		h2{
+			position: absolute;
+			left: 10%;
+			top: 20%;
+		}
+		h3{
+			position: absolute;
+			left: 10%;
+			top: 25%;
+		}
+		h4{
+			position: absolute;
+			left: 10%;
+			top: 30%;
+		}
+		p{
+			position: absolute;
+			left: 10%;
+			top: 40%;
+			color: white;
+			font-size: 20px;
+			font-weight: bolder;
+		}
+	</style>
+</head>
+<body>
+	<audio src="baby.mp3" autoplay="autoplay"></audio>
+	<div class="content">
+		<h2>距离</h2>
+		<h3>2017世界总决赛</h3>
+		<h4>还有</h4>
+		<p></p>
+	</div>
+	
+</body>
+<script type="text/javascript">
+	window.onload = function(){
+		var nDate = new Date('June,11,2017')
+		console.log(nDate)
+		iTimer = 0;
+		
+		iTimer = setInterval(num,1000)
+		
+		
+		
+		function num(){
+		   var date = new Date();
+		   var time = Math.floor((nDate - date)/1000);
+		
+		
+		   var d = Math.floor(time/86400);
+		   var h = Math.floor(time%86400/3600);
+		   var m = Math.floor(time%86400%3600/60)
+		   var s = time%60
+
+		   // console.log(d,h,m,s)
+		   var sp = document.getElementsByTagName("p")[0];
+		   
+		   sp.innerHTML = d +'天'+ h +'小时'+ m +'分钟'+ s +'秒'
+			
+			
+		}
+	}
+	
+</script>
+</html>
