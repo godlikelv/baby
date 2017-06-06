@@ -49,7 +49,11 @@
 	</style>
 </head>
 <body>
-	<audio src=""></audio>
+	<audio autoplay="autoplay">
+	  <source src="baby.mp3" type="audio/mp3" />
+	  <source src="baby.ogg" type="audio/ogg" />
+	Your browser does not support this audio format.
+	</audio>
 	<div class="content">
 		<h2>距离</h2>
 		<h3>男朋友来找我</h3>
@@ -85,11 +89,6 @@
 			
 			
 		}
-		var ad = document.getElementsByTagName("audio")[0];
-		ad.setAttribute("src","baby.mp3");
-		window.addEventListener("click",function(){
-			ad.play();
-		})
 	}
 	
 </script>
